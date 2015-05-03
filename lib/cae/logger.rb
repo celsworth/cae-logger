@@ -50,7 +50,7 @@ module Cae
 				yield
 			ensure
 				ended_at = Process.clock_gettime Process::CLOCK_MONOTONIC
-				msg = "(%.6fs) %s" % [ ended_at - began_at, msg ]
+				msg = "(%.3fs) %s" % [ ended_at - began_at, msg ]
 				logger.logger.send level, msg
 			end
 
