@@ -8,7 +8,7 @@ module Cae
 				@app = app
 			end
 			def call(env)
-				env['rack.logger'] = Logger
+				env['rack.logger'] = Logger.new
 				@app.call(env)
 			end
 		end
