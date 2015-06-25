@@ -59,7 +59,7 @@ module Cae
 					Array(msg).join
 				].compact.join(' ')
 
-				sprintf "%s\n" % msg
+				msg + "\n"
 			end
 		end
 
