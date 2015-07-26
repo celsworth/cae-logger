@@ -25,7 +25,7 @@ module Cae
 			'DEVEL' =>  [:magenta]
 		}.freeze
 
-		@defaults = {
+		DEFAULTS = {
 			format_datetime: '%F %T.%3N',
 			level: ::Logger::DEBUG,
 			progname: nil,
@@ -33,7 +33,9 @@ module Cae
 		}
 
 		class << self
-			attr_reader :defaults
+			def defaults
+				DEFAULTS
+			end
 		end
 
 		attr_reader :logger
